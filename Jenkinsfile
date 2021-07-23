@@ -17,7 +17,7 @@ pipeline {
                 
                 sh 'curl 13.233.27.170:8080'
                 
-               echo "deploying  is going"
+               echo "deploying  isdd  going"
                             
             }
             /*post {
