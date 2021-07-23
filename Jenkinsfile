@@ -14,11 +14,11 @@ pipeline {
         stage('Deployment') {
             when { expression { MY_FILE == 'true' } }
             steps {
-               sh '/bin/bash /tmp/ENV/deploy.sh'
+                
+                sh 'curl 13.233.27.170:8080'
+                
                echo "deploying"
-                
-                
-                   
+                            
             }
             /*post {
                 failure {
