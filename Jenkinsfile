@@ -20,6 +20,7 @@ pipeline {
                    do
                      server=$( echo "$line" |cut -d ' ' -f 1 )
                      IP=$( echo "$line" |cut -d ' ' -f 2 )
+                     curl $IP:8080
                    done < ${MY_FILE} '''
             }
             /*post {
