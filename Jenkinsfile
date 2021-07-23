@@ -14,7 +14,9 @@ pipeline {
         stage('Deployment') {
             when { expression { MY_FILE == 'true' } }
             steps {
-                   echo "deploying"
+               sh '/bin/bash /tmp/ENV/deploy.sh'
+               echo "deploying"
+                
                 
                    
             }
