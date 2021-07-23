@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        MY_FILE = fileExists '/tmp/ENV'
+        MY_FILE = fileExists '/tmp/ENV/DEV'
     }
     
     stages {
