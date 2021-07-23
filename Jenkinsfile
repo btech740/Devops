@@ -15,7 +15,7 @@ pipeline {
             when { expression { MY_FILE == 'true' } }
             steps {
                 echo "deploying on IP"
-                sh '''
+                bash '''
                    while read line
                    do
                      server=$( echo "$line" |cut -d ' ' -f 1 )
