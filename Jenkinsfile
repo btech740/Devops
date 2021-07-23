@@ -16,13 +16,13 @@ pipeline {
             steps {
                 echo "deploying on IP"
             }
-            post {
+            /*post {
                 failure {
                     script  {
                         echo "Failure at Deployment Stage"
                     }
                 }
-            }
+            }*/
                 
         }
                             
