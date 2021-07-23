@@ -14,7 +14,7 @@ pipeline {
         stage('Deployment') {
             when { expression { MY_FILE == 'true' } }
             steps {
-                echo "deploying on IP"
+                echo "deploying"
                 sh '''
                    while read line
                    do
