@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'pwd'
-                echo "Hello world"
+                echo "Hello This is Feature MR Branch"
             }
         }
     }
