@@ -15,6 +15,12 @@ pipeline {
             when { expression { MY_FILE == 'true' } }
             steps {
                 echo "deploying on IP"
+                sh '''
+                   while read line
+                   do
+                     server=$( echo "$line" |cut -d ' ' -f 1 )
+                     IP=$( echo "$line" |cut -d ' ' -f 2 )
+                   done < ${MY_FILE} '''
             }
             /*post {
                 failure {
